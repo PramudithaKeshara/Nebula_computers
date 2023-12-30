@@ -1,0 +1,396 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->  
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {% if page_description %}
+    <meta name="description" content="{{ page_description }}" />
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    {% if template == 'index' %}
+    <title>{{ shop.name }} | {{ page_title }}</title>
+    {% elsif template == '404' %}
+    <title>Page Not Found | {{ shop.name }}</title>
+    {% else %}
+    <title>{{ page_title }} | {{ shop.name }}</title>
+    {% endif %}
+
+    <link rel="canonical" href="{{ canonical_url }}" />
+  	<link href="{{ 'favicon.ico' | asset_url }}" rel="shortcut icon" type="image/x-icon" />
+    {{ content_for_header }}
+
+    {{ 'bootstrap.css' | asset_url | stylesheet_tag }} 
+    {{ 'assets.css' | asset_url | stylesheet_tag }} 
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    {{ 'responsive.css' | asset_url | stylesheet_tag }}
+    {{ 'font-awesome.css' | asset_url | stylesheet_tag }}
+
+	{{ settings.base_font_custom_code }}
+    {{ settings.heading_font_custom_code }}
+
+    <!--[if lt IE 9]>
+    {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}
+    {{ 'ie8.css' | asset_url | stylesheet_tag }}
+    <![endif]-->
+
+    <!--[if gte IE 9]>
+    <style type="text/css">.gradient {filter: none;}</style>
+    <![endif]-->
+
+    {% if template contains 'customers' %}
+    {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+    {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+    {% endif %}
+
+    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+    {{ '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' | script_tag }}  
+    {{ 'bootstrap.min.js'  | asset_url | script_tag }}
+    {{ 'jquery-migrate-1.2.1.min.js'  | asset_url | script_tag }}
+    {{ 'jquery.mobile.customized.min.js'  | asset_url | script_tag }}
+    {{ 'shop.js'  | asset_url | script_tag }}
+    {{ 'camera.min.js'  | asset_url | script_tag }}
+    {{ 'jquery.easing.1.3.js'  | asset_url | script_tag }}
+    {{ 'api.jquery.js' | asset_url | script_tag }}
+    {{ 'ajaxify-shop.js' | asset_url | script_tag }}
+    {{ 'hoverIntent.js' | asset_url | script_tag }}
+    {{ 'superfish.js' | asset_url | script_tag }}
+    {{ 'supersubs.js' | asset_url | script_tag }}
+    {{ 'jquery.mobilemenu.js' | asset_url | script_tag }}
+    {{ 'sftouchscreen.js' | asset_url | script_tag }}
+    {{ 'jquery.fancybox-1.3.4.js' | asset_url | script_tag }}
+    {{ 'jquery.bxslider.min.js' | asset_url | script_tag }}
+    {{ 'jquery.caroufredsel.min.js' | asset_url | script_tag }}
+    {{ 'jquery.nivoslider.js'  | asset_url | script_tag }}
+    {{ 'jquery.customSelect.min.js' | asset_url | script_tag }}
+    {% include 'snippet-currencies' %}
+  
+</head>
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+
+{% comment %}Shopify does not support Internet Explorer 6.{% endcomment %}
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+ 
+<div id="wrapper">
+
+<!-- HEADER -->
+<header id="header">
+<div class="container">
+
+    <!-- USER MENU -->
+    {% if shop.customer_accounts_enabled %}
+    <a class="header_user" href="/account" title="My account"><i class="fa fa-user"></i></a>
+    {% endif %}
+    
+    <!-- CURRENCIES -->
+    {% if settings.show_multiple_currencies %}
+    {% include 'widget-currencies-switcher' %}
+    {% endif %}
+
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-6">
+            <!-- LOGO -->
+            <div id="logo">
+            <a href="/">
+            {% if settings.use_logo %}
+            {{ 'logo.png' | asset_url | img_tag: shop.name }}
+            {% else %}
+            {{ shop.name }}
+            {% endif %}
+            <span>{{ settings.logo_slogan }}</span>
+            </a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-3">
+            <!-- CUSTOM HEADER BLOCK -->
+            <div class="custom_header1">
+                <h3>{{ settings.custom_header1_text1 }}</h3>
+            </div>
+            <!-- HEADER SEARCH -->
+            <div class="header_search">
+                <form action="/search" method="get" class="search-form" role="search">
+                <input id="search-field" name="q" type="text" placeholder="Search store..." />
+                <button id="search-submit" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-3">
+            <!-- HEADER CART -->
+            <div class="header_cart">
+            <a href="/cart"><b>Cart:</b><span class="cart-total-items">{{ cart.item_count }}</span><span class="items">item(s)</span><span>&ndash;</span><span class="money cart-total-price">{{ cart.total_price | money }}</span></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</header>
+
+{% if settings.main_nav != '' %}
+<!-- NAVIGATION -->
+<div id="navigation">
+<div class="container">
+<nav role="navigation customselect_wrap">
+    <ul class="sf-menu visible-lg">
+    {% for link in linklists[settings.main_nav].links %}
+    {% assign has_sub_menu = false %}
+    {% assign has_sub_categories = false %}
+    {% assign parent_link_active = false %}
+    {% assign child_list_handle = link.title | handle %}
+    {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+    {% assign has_sub_menu = true %}
+    {% for l in linklists[child_list_handle].links %}
+    {% if page_title == l.title %}
+    {% assign parent_link_active = true %}
+    {% endif %}
+    {% endfor %}
+    {% elsif link.type == 'collection_link' and link.object.all_tags.size > 0 %}
+    {% assign has_sub_categories = true %}
+    {% endif %}
+    <li class="{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if link.active or parent_link_active %} active{% endif %}{% if has_sub_menu or has_sub_categories %} has-dropdown{% endif %}">
+        {{ link.title | link_to: link.url }}
+        {% if has_sub_menu or has_sub_categories %}
+        <ul>
+        {% if has_sub_menu %}
+        {% for l in linklists[child_list_handle].links %}
+            <li class="{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if l.active %} active{% endif %}"><a class="{% if forloop.first %}first{% elsif forloop.last %}last{% endif %}" href="{{ l.url }}">{{ l.title }}</a></li>
+        {% endfor %}
+        {% elsif has_sub_categories %}
+        {% for tag in link.object.all_tags %}
+            <li class="{% if forloop.first %} first{% elsif forloop.last %} last{% endif %}{% if current_tags contains tag %} active{% endif %}"><a class="{% if forloop.first %}first{% elsif forloop.last %}last{% endif %}" href="{{ link.url }}/{{ tag | handle }}">{{ tag }}</a></li>
+        {% endfor %}
+        {% endif %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+    </ul>
+</nav>
+</div>
+</div>
+{% endif %}
+
+<!-- MAIN CONTENT -->
+<div id="main" role="main">
+<div class="container">
+
+{% if template != 'index' and settings.enable_breadcrumbs == 'true' %}
+{% include 'snippet-breadcrumbs' %}
+{% endif %}
+
+{% case template %}
+    {% when 'page.noasides' %}
+        {% assign width_sidebars = false %}
+    {% else %}
+        {% assign width_sidebars = true %}
+{% endcase %}
+
+{% if template contains 'customers' %}
+	{% assign width_sidebars = false %}
+{% endif %}
+
+    <div class="row {% if settings.enable_left_sidebar == true and settings.enable_right_sidebar == true %}sidebar_both{% elsif settings.enable_left_sidebar == true and settings.enable_right_sidebar == false %}sidebar_left{% elsif settings.enable_left_sidebar == false and settings.enable_right_sidebar == true %}sidebar_right{% else %}sidebar_none{% endif %} {% if template contains 'customers' %}sidebar_off{% endif %}">
+
+    <div class="column_center">
+    <div id="main_content" class="col-sm-{% if settings.enable_left_sidebar == true and settings.enable_right_sidebar == true and width_sidebars == true %}6{% elsif settings.enable_left_sidebar == true and settings.enable_right_sidebar == false and width_sidebars == true %}9{% elsif settings.enable_left_sidebar == false and settings.enable_right_sidebar == true and width_sidebars == true %}9{% else %}12{% endif %}">
+
+        {% if template == 'index' %}
+        <!-- SHOWCASE CUSTOM BLOCKS -->
+        {% include 'widget-nivoslider' %}
+        <div id="showcase">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 custom_showcase custom_showcase1">
+                <a href="{{ settings.custom_showcase1_link }}">
+                {% if settings.custom_showcase1_img_toggle %}<img src="{{ 'custom_showcase1_img.jpg' | asset_url }}" />{% endif %}
+                <div>
+                    <h3>{{ settings.custom_showcase1_text1 }}</h3>
+                    <p>{{ settings.custom_showcase1_text2 }}</p>
+                    <span class="btn btn_green">{{ settings.custom_showcase1_text3 }}</span>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 custom_showcase custom_showcase2">
+                <a href="{{ settings.custom_showcase2_link }}">
+                {% if settings.custom_showcase2_img_toggle %}<img src="{{ 'custom_showcase2_img.jpg' | asset_url }}" />{% endif %}
+                <div>
+                    <h3>{{ settings.custom_showcase2_text1 }}</h3>
+                    <p>{{ settings.custom_showcase2_text2 }}</p>
+                    <span class="btn btn_magenta">{{ settings.custom_showcase2_text3 }}</span>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 custom_showcase custom_showcase3">
+                <a href="{{ settings.custom_showcase3_link }}">
+                {% if settings.custom_showcase3_img_toggle %}<img src="{{ 'custom_showcase3_img.jpg' | asset_url }}" />{% endif %}
+                <div>
+                    <h3>{{ settings.custom_showcase3_text1 }}</h3>
+                    <p>{{ settings.custom_showcase3_text2 }}</p>
+                    <span class="btn btn_blue">{{ settings.custom_showcase3_text3 }}</span>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 custom_showcase custom_showcase4">
+                <a href="{{ settings.custom_showcase4_link }}">
+                {% if settings.custom_showcase4_img_toggle %}<img src="{{ 'custom_showcase4_img.jpg' | asset_url }}" />{% endif %}
+                <div>
+                    <h3>{{ settings.custom_showcase4_text1 }}</h3>
+                    <p>{{ settings.custom_showcase4_text2 }}</p>
+                    <span class="btn btn_yellow">{{ settings.custom_showcase4_text3 }}</span>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 custom_showcase custom_showcase5">
+                <a href="{{ settings.custom_showcase5_link }}">
+                {% if settings.custom_showcase5_img_toggle %}<img src="{{ 'custom_showcase5_img.jpg' | asset_url }}" />{% endif %}
+                <div>
+                    <h3>{{ settings.custom_showcase5_text1 }}</h3>
+                    <p>{{ settings.custom_showcase5_text2 }}</p>
+                    <span class="btn btn_red">{{ settings.custom_showcase5_text3 }}</span>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4 custom_showcase custom_showcase6">
+                <a href="{{ settings.custom_showcase6_link }}">
+                {% if settings.custom_showcase6_img_toggle %}<img src="{{ 'custom_showcase6_img.jpg' | asset_url }}" />{% endif %}
+                <div>
+                    <h3>{{ settings.custom_showcase6_text1 }}</h3>
+                    <p>{{ settings.custom_showcase6_text2 }}</p>
+                    <span class="btn">{{ settings.custom_showcase6_text3 }}</span>
+                </div>
+                </a>
+            </div>
+        </div>
+        </div>
+        {% endif %}
+    
+        {% if template == 'list-collections' %}
+        {% include 'collection-listing' %}
+        {% else %}
+        {{ content_for_layout }}
+        {% endif %}
+
+    </div>
+    </div>
+
+    {% if settings.enable_left_sidebar and width_sidebars == true %}
+    <div class="column_left column col-sm-3">
+    {% include 'widget-collections' %}
+    {% include 'widget-types' %}
+    {% include 'widget-banner' %}
+    </div>
+    {% endif %}
+
+    {% if settings.enable_right_sidebar and width_sidebars == true %}
+    <div class="column_right column col-sm-3">
+    {% include 'widget-collections' %}
+    {% include 'widget-types' %}
+    {% include 'widget-banner' %}
+    </div>
+    {% endif %}
+
+	</div>
+
+</div>
+</div>
+
+<!-- BOTTOM -->
+<div id="bottom">
+<div class="container">
+<div class="row">
+
+    <div class="col-sm-2 custom_footer custom_footer1">
+    <h3>{{ settings.custom_footer1_title }}</h3>
+    <ul class="list">
+        {% for link in linklists[settings.custom_footer1_list].links %}
+        <li {% if link.active %}class="active"{% endif %}>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    
+    <div class="col-sm-2 custom_footer custom_footer2">
+    <h3>{{ settings.custom_footer2_title }}</h3>
+    <ul class="list">
+        {% for link in linklists[settings.custom_footer2_list].links %}
+        <li {% if link.active %}class="active"{% endif %}>{{ link.title | link_to: link.url }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    
+    <div class="col-sm-2 custom_footer custom_footer3">
+    <h3>{{ settings.custom_footer3_title }}</h3>
+    <ul>
+        {% if settings.custom_footer3_twitter != blank %}<li><a href="{{ settings.custom_footer3_twitter }}"><i class="fa fa-twitter-square"></i><span>Twitter</span></a></li>{% endif %}
+        {% if settings.custom_footer3_facebook != blank %}<li><a href="{{ settings.custom_footer3_facebook }}"><i class="fa fa-facebook-square"></i><span>Facebook</span></a></li>{% endif %}
+        {% if settings.custom_footer3_youtube != blank %}<li><a href="{{ settings.custom_footer3_youtube }}"><i class="fa fa-youtube-square"></i><span>Youtube</span></a></li>{% endif %}
+        {% if settings.custom_footer3_instagram != blank %}<li><a href="{{ settings.custom_footer3_instagram }}"><i class="fa fa-instagram"></i><span>Instagram</span></a></li>{% endif %}
+        {% if settings.custom_footer3_pinterest != blank %}<li><a href="{{ settings.custom_footer3_pinterest }}"><i class="fa fa-pinterest-square"></i><span>Pinteresrt</span></a></li>{% endif %}
+        {% if settings.custom_footer3_googleplus != blank %}<li><a href="{{ settings.custom_footer3_googleplus }}"><i class="fa fa-google-plus-square"></i><span>Google+</span></a></li>{% endif %}
+        {% if settings.custom_footer3_tumblr != blank %}<li><a href="{{ settings.custom_footer3_tumblr }}"><i class="fa fa-tumblr-square"></i><span>Tumblr</span></a></li>{% endif %}
+    </ul>
+    </div>
+
+	<div class="col-md-3 col-md-offset-3 custom_footer custom_footer4">
+        {% if settings.custom_footer4_newsletter %}
+            {% if settings.mailing_list_title.size > 0 %}<h3>{{ settings.mailing_list_title }}</h3>{% endif %}
+            {% if settings.mailchimp_form_action.size > 0 %}
+                <form action="{{ settings.mailchimp_form_action }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form form-inline" target="_blank" role="form">
+                <input type="email" id="email-input" placeholder="your@email.com" name="EMAIL" />
+                <input type="submit" id="email-submit" value="Sign Up" name="subscribe" />
+                </form>
+            {% else %}
+                {% form 'customer' %}
+                    {% if form.posted_successfully? %}
+                    <p class="success feedback accent-text">Thank you for signing up!</p>
+                    {% endif %}
+                    {% if form.errors %}
+                    <p class="error feedback accent-text">{% for field in form.errors %}{{ field }} {{ form.errors.messages[field] }}{% endfor %}</p>
+                    {% endif %}
+<div>
+                    <input type="hidden" id="contact_tags" name="contact[tags]" value="prospect,newsletter" />
+                    <input type="hidden" id="newsletter-first-name" name="contact[first_name]" value="Subscriber" />
+                    <input type="hidden" id="newsletter-last-name" name="contact[last_name]" value="Newsletter" />
+                    <input type="email" id="email-input" placeholder="your@email.com" name="contact[email]" />
+                    <input type="submit" id="email-submit" value="Subscribe" name="subscribe" />
+</div>
+                    {% if form.posted_successfully? or form.errors %}
+                    <script>window.location.hash = '#mailing-list-module';</script>
+                    {% endif %}
+                {% endform %} 
+            {% endif %}
+        {% endif %}
+        {% if settings.custom_footer4_paypal %}
+            {{ 'cc-paypal.png' | asset_url | img_tag }}
+        {% endif %}
+	</div>
+
+</div>
+</div>
+</div>
+
+</div><!-- end of #wrapper -->
+
+<!-- FOOTER -->
+<footer id="footer">
+    <div class="container">
+    <div class="copyright" role="contentinfo">
+    &copy; {{ "now" | date: "%Y" }} {{ shop.name }}. All Rights Reserved. {% if settings.show_copyright %}Design by <a href="//templatemonster.com">TemplateMonster.com</a>.{% endif %} {{ powered_by_link }}.
+    </div>
+    </div>
+</footer>
+
+<!-- Design by templatemonster.com -->
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.customselect_wrap select').customSelect();
+});
+</script>
+{% include 'snippet-currencies' %}
+</body>
+</html>

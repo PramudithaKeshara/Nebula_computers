@@ -1,0 +1,7 @@
+{% if settings.custom_sidebar_img_toggle %}
+<div class="widget widget_banner">
+<div class="widget_content">
+    <a href="{{ settings.custom_sidebar_link }}"><img src="{{ 'custom_sidebar_img.jpg' | asset_url }}" /></a>
+</div>
+</div>
+{% endif %}

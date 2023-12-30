@@ -1,0 +1,41 @@
+<div class="widget widget__best-sellers">
+    <h3 class="widget_header">Best Sellers</h3>
+    <div class="widget_content">
+        <div class="product-listing product-listing__bestsellers">
+        {% for product in collections[settings.bestsellers_cat].products limit:3 %}
+            <div class="product">
+            
+            <div class="product_img">  
+                <a href="{{ product.url | within: collection }}">
+                <img src="{{ product.featured_image.src | product_img_url: 'small' }}" alt="{{ product.featured_image.alt | escape }}" />
+                </a>
+            </div>
+            
+            <div class="product_name">
+                <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+            </div>
+            
+            <div class="product_price">
+                {% if product.price_varies %}From{% endif %}
+                <span class="money">{{ product.price | money }}</span>
+                {% if on_sale %}
+                <span class="money compare-at-price">{{ product.compare_at_price | money }}</span>
+                {% endif %}
+            </div>
+            
+            <div class="sale">
+            {% if product.compare_at_price and product.compare_at_price > product.price %}
+            Save {{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0' }}%
+            {% endif %}
+            </div>
+            
+            <div class="product_links">
+                {% include "snippet-add-to-cart" %}         
+                <a class="btn" href="{{ product.url | within: collection }}">View</a>
+            </div>
+              
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>

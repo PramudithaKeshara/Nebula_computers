@@ -1,0 +1,52 @@
+{% comment %}If no value is passed to the snippet, we will set the snippet variable to a sensible default.{% endcomment %}
+
+{% assign item_width = 3 %}
+
+{% case settings.collection_listing_cols %}
+  {% when '1' %}
+    {% assign item_width = 12 %}
+  {% when '2' %}
+    {% assign item_width = 6 %}
+  {% when '3' %}
+    {% assign item_width = 4 %}
+  {% when '4' %}
+    {% assign item_width = 3 %}
+  {% when '6' %}
+    {% assign item_width = 2 %}
+{% endcase %}
+
+<li class="collection collection__col-gird-item col-sm-{{item_width}}">
+  <div class="collection_image-wrap">  
+    <a href="{{ collection.url }}">
+      {% if collection.image %}
+        <img src="{{ collection.image.src | collection_img_url: 'medium' }}" alt="{{ collection.image.alt | escape }}" />
+      {% else %}
+        <img src="{{ collection.products.first.featured_image.src | product_img_url: 'medium' }}" alt="{{ collection.title | escape }}" />
+      {% endif %}
+    </a>
+  </div><!-- .coll-image-wrap -->
+  
+  <div class="collection_caption">
+      <h3 class="collection_title">
+        <a href="{{ collection.url }}">
+          {{ collection.title }}
+        </a>
+      </h3>
+      <span class="collection_item-count">
+        {{ collection.all_products_count }} {{ collection.all_products_count | pluralize:'item','items' }}
+      </span>    
+  </div><!-- .coll-caption -->  
+</li>
+
+{% case settings.collection_listing_cols %}
+  {% when '1' %}
+    {% cycle : '</div><div class="row">' %}
+  {% when '2' %}
+    {% cycle : '', '</div><div class="row">' %}
+  {% when '3' %}
+    {% cycle : '', '', '</div><div class="row">' %}
+  {% when '4' %}
+    {% cycle : '', '', '', '</div><div class="row">' %}  
+  {% when '6' %}
+    {% cycle : '', '', '', '', '', '</div><div class="row">' %}
+{% endcase %}

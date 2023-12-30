@@ -1,0 +1,12 @@
+<div class="widget widget__collections">
+  	<h3 class="widget_header">Collections</h3>
+    <div class="widget_content">
+        <ul class="list">
+        {% for collection in collections %}
+        <li class="{{ collection.handle }}{% if page_title == collection.title %} active{% endif %}">
+          <a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title | escape }} ({{ collection.products_count }})</a>
+        </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>

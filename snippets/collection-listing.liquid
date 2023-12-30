@@ -1,0 +1,31 @@
+{% assign using_link_list = false %}
+
+{% if collection-listing != '' and linklists[collection-listing].handle == collection-listing and linklists[collection-listing].links.size > 0 %}
+  {% assign using_link_list = true %}
+{% endif %}
+<div class="collection-listing-scope">
+
+  <div class="page_header">
+    <h2 class="page_title">{% if using_link_list %}{{ linklists[collection-listing].title }}{% else %}Collections{% endif %}</h2>
+  </div>
+
+  <div class="page_content">
+    <div class="row">
+    {% if using_link_list %}
+      {% for link in linklists[collection-listing].links %}
+        {% if link.type == 'collection_link' %}
+          {% assign collection = link.object %}
+          {% include 'collection-grid-item' %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {% for collection in collections %}
+        {% unless collection.handle == 'all' or collection.handle == 'frontpage' %}
+          {% include 'collection-grid-item' %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+    </div>
+  </div>
+
+</div>

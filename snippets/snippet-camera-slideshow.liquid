@@ -1,0 +1,63 @@
+{% assign slide1 = 'slide_1_image.jpg' %}
+{% assign slide2 = 'slide_2_image.jpg' %}
+{% assign slide3 = 'slide_3_image.jpg' %}
+
+
+{% if settings.slide1_toggle or settings.slide2_toggle or settings.slide3_toggle %}
+
+<div id="slider"> 
+    
+  {% if settings.slide1_toggle %}
+  <div class="slide" data-src="{{ slide1 | asset_url }}" data-link="{{ settings.slide_1_caption_link }}">
+    <!--<div class="camera_caption">
+      <h3>{{ settings.slide_1_caption_title }}</h3>
+      <p>{{ settings.slide_1_caption_desc }}</p>
+      <a href="{{ settings.slide_1_caption_link }}" class="link"><i class="fa fa-angle-right"></i></a>
+    </div>-->
+  </div>
+  {% endif %}
+  
+  {% if settings.slide2_toggle %}
+  <div class="slide"  data-src="{{ slide2 | asset_url }}" data-link="{{ settings.slide_2_caption_link }}">
+    <!--<div class="camera_caption">
+      <h3>{{ settings.slide_2_caption_title }}</h3>
+      <p>{{ settings.slide_2_caption_desc }}</p>
+      <a href="{{ settings.slide_2_caption_link }}" class="link"><i class="fa fa-angle-right"></i></a>
+    </div>-->
+  </div>
+  {% endif %}
+  
+  {% if settings.slide3_toggle %}
+  <div class="slide"  data-src="{{ slide3 | asset_url }}" data-link="{{ settings.slide_3_caption_link }}">
+    <!--<div class="camera_caption">
+      <h3>{{ settings.slide_3_caption_title }}</h3>
+      <p>{{ settings.slide_3_caption_desc }}</p>
+      <a href="{{ settings.slide_3_caption_link }}" class="link"><i class="fa fa-angle-right"></i></a>
+    </div>--> 
+  </div>
+  {% endif %}
+  
+</div>
+
+  <script>
+    jQuery(function($){
+      $('div#slider').camera({
+        fx: 'simpleFade',
+        height: '31.6%',
+        loader: 'none',
+        navigation: false,
+        {% if settings.slider_toggle %}
+          pagination: true,          
+          autoAdvance: true,
+        {% else %}
+          pagination: false,          
+          autoAdvance: false,
+        {% endif %}
+        playPause: false,
+  	  time: 7000,
+  	  transPeriod: 1500      
+      });
+    });
+  </script>
+
+{% endif %}

@@ -1,0 +1,1178 @@
+<div class="section-info">
+    <p>Theme settings allow you to customize the look and feel of your shop without having to delve into HTML or CSS code. Please see our <a title="Open Documentation in a new window" target="_blank" href="//tm-lingerie-theme001.myshopify.com/pages/documentation">help page on theme settings</a> to learn more about how to customize your store.</p>
+    <p>In case of any issues with the theme feel free to contact our team at <a href="mailto:shopify@template-help.com">shopify@template-help.com</a></p>
+    <p><b> We also offer theme customization services. You can contact our team to discuss estimate.</b></p>
+</div>
+
+
+
+<!-- ************************************ GENERAL ************************************ -->
+<fieldset>
+<legend>General</legend>
+<table>
+
+<tr>
+    <td colspan="2"><h3><b>Logo options</b></h3></td>
+</tr>
+<tr>
+    <td><label for="logo_slogan">Logo slogan</label></td>
+    <td><input type="text" id="logo_slogan" name="logo_slogan" class="long" /></td>
+</tr>
+<tr>
+    <td><label for="use_logo">Use custom Logo?</label></td>
+    <td><input type="checkbox" id="use_logo" name="use_logo" value="0"/></td>
+</tr>
+<tr>
+    <td><label for="logo_image">Custom logo image</label></td>
+    <td><input type="file" name="logo.png" id="logo_image" /></td>
+</tr>
+<tr>
+    <td><label for="checkout_logo">Use Custom Logo for Checkout pages</label></td>
+    <td><input type="checkbox" id="checkout_logo" name="checkout_logo" value="0"/></td>
+</tr>
+<tr>
+    <td colspan="2"><h3><b>Favicon</b></h3></td>
+</tr>
+<tr>
+    <td><label for="favicon">Upload a favicon<br /><small>Must be 16x16px</small></label></td>
+    <td><input type="file" id="favicon" name="favicon.ico" /></td>
+</tr>
+
+<tr>
+    <td colspan="2"><h3><b>Copyright</b></h3></td>
+</tr>
+<tr>
+    <td><label for="show_copyright">Display copyright "Designed by..."</label></td>
+    <td><input type="checkbox" id="show_copyright" name="show_copyright" value="1" checked="checked"/></td>
+</tr>
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ TYPOGRAPHY ************************************ -->
+<fieldset>
+<legend>Typography</legend>
+<table>
+
+
+<tr>
+    <td colspan="3"><h3><b>Base font</b></h3></td>
+</tr>
+<tr>
+    <td><label for="base_font_type">Base font type</label></td>
+    <td><label for="base_font_regular"><input type="radio" name="base_font_type" value="font_regular" id="base_font_regular" />Regular</label></td>
+    <td><label for="base_font_custom"><input type="radio" name="base_font_type" value="font_custom" id="base_font_custom" />Custom</label></td>
+</tr> 
+<tr>
+    <td></td>
+    <td>
+        <select class="font" name="base_font_regular_family" id="base_font_regular_family">
+            <option value="Arial, Helvetica, sans-serif" selected="selected">Arial, Helvetica, sans-serif</option>
+            <option value="Georgia, serif">Georgia, serif</option>
+            <option value="Times New Roman, Times, serif">Times New Roman, Times, serif</option>
+            <option value="Trebuchet MS, sans-serif">Trebuchet MS, sans-serif</option>
+            <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+        </select>
+	</td>
+    <td>
+        <label for="base_font_custom_code">Google Font embed code</label>
+        <input type="text" id="base_font_custom_code" name="base_font_custom_code" value="" class="long" />
+    </td>
+</tr>
+<tr>
+    <td colspan="2"></td>
+    <td>
+        <label for="base_font_custom_family">Google Font family</label>
+        <input type="text" id="base_font_custom_family" name="base_font_custom_family" value="" class="long" />
+    </td>
+</tr>
+<tr>
+    <td><label for="regular_font_size">Base font size</label></td>
+    <td colspan="2"><input type="text" id="regular_font_size" name="regular_font_size" value="14px"/></td>
+</tr>
+<tr>
+    <td><label for="font_color">Base font color</label></td>
+    <td colspan="2"><input type="text" class="color" id='font_color' name="font_color" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Page heading font</b></h3></td>
+</tr>
+<tr>
+    <td><label for="heading_font_type">Page heading font type</label></td>
+    <td><label for="heading_font_regular"><input type="radio" name="heading_font_type" value="font_regular" id="heading_font_regular" />Regular</label></td>
+    <td><label for="heading_font_custom"><input type="radio" name="heading_font_type" value="font_custom" id="heading_font_custom" />Custom</label></td>
+</tr> 
+<tr>
+    <td></td>
+    <td>
+      	<select class="font" name="heading_font_regular_family" id="heading_font_regular_family">
+            <option value="Arial, Helvetica, sans-serif" selected="selected">Arial, Helvetica, sans-serif</option>
+            <option value="Georgia, serif">Georgia, serif</option>
+            <option value="Times New Roman, Times, serif">Times New Roman, Times, serif</option>
+            <option value="Trebuchet MS, sans-serif">Trebuchet MS, sans-serif</option>
+            <option value="Verdana, Geneva, sans-serif">Verdana, Geneva, sans-serif</option>
+      	</select>
+  	</td>
+    <td>
+        <label for="heading_font_custom_code">Google Font embed code</label>
+        <input type="text" id="heading_font_custom_code" name="heading_font_custom_code" value="" class="long" />
+    </td>
+</tr>
+<tr>
+    <td colspan="2"></td>
+    <td>
+        <label for="heading_font_custom_family">Google Font family</label>
+        <input type="text" id="heading_font_custom_family" name="heading_font_custom_family" value="" class="long" />
+    </td>
+</tr>
+<tr>
+    <td><label for="heading_font_size">Page heading font size</label></td>
+    <td colspan="2"><input type="text" id="heading_font_size" name="heading_font_size" value="14px"/></td>
+</tr>
+<tr>
+    <td><label for="heading_font_color">Page heading font color</label></td>
+    <td colspan="2"><input type="text" class="color" id="heading_font_color" name="heading_font_color" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Links</b></h3></td>
+</tr>
+<tr>
+    <td><label for="link_color">Links text color</label></td>
+    <td colspan="2">
+		<input type="text" class="color" id="link_color" name="link_color" value="" />
+    </td>
+</tr>
+<tr>
+    <td><label for="link_color_act">Links text color (hover)</label></td>
+    <td colspan="2">
+        <input type="text" class="color" id="link_color_act" name="link_color_act" value="" />
+    </td>
+</tr>
+
+<tr>
+    <td colspan="3"><h3><b>Product name</b></h3></td>
+</tr>
+<tr>
+    <td><label for="product_name_font_size">Product name font size</label></td>
+    <td colspan="2"><input type="text" id="product_name_font_size" name="product_name_font_size" value="" /></td>
+</tr>
+<tr>
+    <td><label for="product_name_color">Product name font color</label></td>
+    <td colspan="2"><input type="text" class="color" id="product_name_color" name="product_name_color" value="" /></td>
+</tr>
+<tr>
+    <td><label for="product_name_color_act">Product name font color (hover)</label></td>
+    <td colspan="2"><input type="text" class="color" id="product_name_color_act" name="product_name_color_act" value="" /></td>
+</tr>
+
+<tr>
+    <td colspan="3"><h3><b>Product description</b></h3></td>
+</tr>
+<tr>
+    <td><label for="product_desc_font_size">Product description font size</label></td>
+    <td colspan="2"><input type="text" id="product_desc_font_size" name="product_desc_font_size" value="" /></td>
+</tr>
+<tr>
+    <td><label for="product_desc_color">Product description font color</label></td>
+    <td colspan="2"><input type="text" class="color" id="product_desc_color" name="product_desc_color" value="" /></td>
+</tr>
+
+<tr>
+    <td colspan="3"><h3><b>Product price</b></h3></td>
+</tr>
+<tr>
+    <td><label for="product_price_color">Product price color</label></td>
+    <td colspan="2"><input type="text" class="color" id="product_price_color" name="product_price_color" value="" /></td>
+</tr>
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ LAYOUT ************************************ -->
+<fieldset>
+<legend>Layout</legend>
+<table>
+
+<tr>
+    <td colspan="2"><h3><b>Header</b></h3></td>
+</tr>
+<tr>
+    <td><label for="main_nav">Main navigation</label></td>
+    <td>
+        <select class="linklist" id="main_nav" name="main_nav">
+        <option selected="selected" value="main-menu">Main Menu</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2"><h3><b>Sidebars</b></h3></td>
+</tr>
+<tr>
+    <td><label for="enable_left_sidebar">Enable Left Sidebar</label></td>
+    <td><input type="checkbox" name="enable_left_sidebar" id="enable_left_sidebar"/></td>
+</tr>
+<tr>
+    <td><label for="enable_right_sidebar">Enable Right Sidebar</label></td>
+    <td><input type="checkbox" name="enable_right_sidebar" id="enable_right_sidebar"/></td>
+</tr>
+
+<tr><td colspan="2"><hr /></td></tr>
+<tr>
+    <td><label for="bestsellers_cat">Best Sellers</label></td>
+    <td>
+        <select class="collection" name="bestsellers_cat" id="bestsellers_cat" >
+        <option selected="selected" value="frontpage">Frontpage</option>
+        </select>
+      	<small>Please select collection that will be displayed in Best Sellers block</small>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2"><h3><b>Homepage products</b></h3></td>
+</tr>
+<tr>
+    <td><label for="homepage_products">Homepage products collection</label><small>Products from this collection will be on the homepage</small></td>
+    <td>
+        <select class="collection" name="homepage_products" id="homepage_products" >
+        <option selected="selected" value="frontpage">Frontpage</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td><label for="homepage_products_count">Homepage products count</label></td>
+    <td><input type="text" name="homepage_products_count" id="homepage_products_count"/></td>
+</tr>
+<tr>
+    <td><label for="homepage_listing_cols">Homepage listing columns</label></td>
+    <td>
+        <select name="homepage_listing_cols" id="homepage_listing_cols">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected="selected">4</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2"><h3><b>Collection page</b></h3></td>
+</tr>
+<tr>
+    <td><label for="collection_listing_count">Collection products count</label></td>
+    <td><input type="text" value="6" name="collection_listing_count" id="collection_listing_count"/></td>
+</tr>
+<tr>
+    <td><label for="collection_listing_cols">Collection listing columns</label></td>
+    <td>
+        <select name="collection_listing_cols" id="collection_listing_cols">
+        <option value="2">2</option>
+        <option value="3" selected="selected">3</option>
+        <option value="4">4</option>
+        </select>
+    </td>
+</tr>
+
+
+<tr>
+    <td colspan="2"><h3><b>Product listing layout</b></h3></td>
+</tr>
+<tr>
+    <td><label for="homepage_listing_image_size">Product image size</label></td>
+    <td>
+        <select name="homepage_listing_image_size" id="homepage_listing_image_size">
+        <option value="pico">16x16</option>
+        <option value="icon">32x32</option>
+        <option value="thumb">50x50</option>
+        <option value="small">100x100</option>
+        <option value="compact" selected="selected">160x160</option>
+        <option value="medium">240x240</option>
+        <option value="large">480x480</option>
+        <option value="grande">600x600</option>
+        <option value="1024x1024">1024x1024</option>
+        <option value="2048x2048">2048x2048</option>
+        <option value="master">maximum available</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2"><h3><b>Page content</b></h3></td>
+</tr>
+<tr>
+    <td><label for="enable_breadcrumbs">Breadcrumbs</label></td>
+    <td>
+        <select name="enable_breadcrumbs" id="enable_breadcrumbs">
+        <option value="true" selected="selected">Enable</option>
+        <option value="false">Disable</option>
+        </select>
+    </td>
+</tr>
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ COLORS ************************************ -->
+<fieldset>
+<legend>Colors</legend>
+<table>
+
+<tr>
+    <td colspan="3"><h3><b>Global color settings</b></h3></td>
+</tr>
+<tr>
+    <td><label for="body_bg_type">Body background type</label></td>
+    <td><label for="body_bg_color"><input type="radio" name="body_bg_type" value="bg_color" id="body_bg_color" />Color</label></td>
+    <td><label for="body_bg_image"><input type="radio" name="body_bg_type" value="bg_image" id="body_bg_image" />Image</label></td>
+</tr> 
+<tr>
+    <td></td>
+    <td><input type="text" class="color" id='body_bg_color' name="body_bg_color" value=""/></td>
+    <td><input type="file" name="body_bg.png" id="body_bg_img" data-max-width="400" data-max-height="400" /><br /><small>Maximum dimensions are 400x400px</small></td>
+</tr>
+
+<tr>
+  <td colspan="3"><hr /></td>
+</tr>
+<tr>
+    <td><label for="border_color">Global border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='border_color' name="border_color" value="" /></td>
+</tr>
+
+<tr>
+    <td colspan="3"><h3><b>Color scheme</b></h3></td>
+</tr>
+<tr>
+    <td><label for="color_1">Color 1</label></td>
+    <td><input type="text" class="color" id='color_1' name="color_1" value=""/></td>
+    <td></td>
+</tr> 
+<tr>
+    <td><label for="color_2">Color 2</label></td>
+    <td><input type="text" class="color" id='color_2' name="color_2" value=""/></td>
+    <td></td>
+</tr>
+<tr>
+    <td><label for="color_3">Color 3</label></td>
+    <td><input type="text" class="color" id='color_3' name="color_3" value=""/></td>
+    <td></td>
+</tr>
+<tr>
+    <td><label for="color_4">Color 4</label></td>
+    <td><input type="text" class="color" id='color_4' name="color_4" value=""/></td>
+    <td></td>
+</tr> 
+<tr>
+    <td><label for="color_5">Color 5</label></td>
+    <td><input type="text" class="color" id='color_5' name="color_5" value=""/></td>
+    <td></td>
+</tr>
+<tr>
+    <td><label for="color_6">Color 6</label></td>
+    <td><input type="text" class="color" id='color_6' name="color_6" value=""/></td>
+    <td></td>
+</tr>
+<tr>
+    <td><label for="color_7">Color 7</label></td>
+    <td><input type="text" class="color" id='color_7' name="color_7" value=""/></td>
+    <td></td>
+</tr> 
+<tr>
+    <td><label for="color_8">Color 8</label></td>
+    <td><input type="text" class="color" id='color_8' name="color_8" value=""/></td>
+    <td></td>
+</tr>
+<tr>
+    <td><label for="color_9">Color 9</label></td>
+    <td><input type="text" class="color" id='color_9' name="color_9" value=""/></td>
+    <td></td>
+</tr>
+<tr>
+    <td><label for="color_10">Color 10</label></td>
+    <td><input type="text" class="color" id='color_10' name="color_10" value=""/></td>
+    <td></td>
+</tr>
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ GRADIENTS ************************************ -->
+<fieldset>
+<legend>Gradients</legend>
+<table>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #1</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient1_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient1_top' name="gradient1_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient1_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient1_bottom' name="gradient1_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient1_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient1_border' name="gradient1_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #2</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient2_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient2_top' name="gradient2_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient2_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient2_bottom' name="gradient2_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient2_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient2_border' name="gradient2_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #3</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient3_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient3_top' name="gradient3_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient3_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient3_bottom' name="gradient3_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient3_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient3_border' name="gradient3_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #4</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient4_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient4_top' name="gradient4_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient4_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient4_bottom' name="gradient4_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient4_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient4_border' name="gradient4_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #5</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient5_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient5_top' name="gradient5_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient5_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient5_bottom' name="gradient5_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient5_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient5_border' name="gradient5_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #6</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient6_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient6_top' name="gradient6_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient6_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient6_bottom' name="gradient6_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient6_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient6_border' name="gradient6_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #7</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient7_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient7_top' name="gradient7_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient7_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient7_bottom' name="gradient7_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient7_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient7_border' name="gradient7_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #8</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient8_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient8_top' name="gradient8_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient8_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient8_bottom' name="gradient8_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient8_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient8_border' name="gradient8_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #9</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient9_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient9_top' name="gradient9_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient9_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient9_bottom' name="gradient9_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient9_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient9_border' name="gradient9_border" value=""/></td>
+</tr>
+
+
+<tr>
+    <td colspan="3"><h3><b>Gradient #10</b></h3></td>
+</tr>
+<tr>
+    <td><label for="gradient10_top">Top color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient10_top' name="gradient10_top" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient10_bottom">Bottom color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient10_bottom' name="gradient10_bottom" value=""/></td>
+</tr>
+<tr>
+    <td><label for="gradient10_border">Border color</label></td>
+    <td colspan="2"><input type="text" class="color" id='gradient10_border' name="gradient10_border" value=""/></td>
+</tr>
+
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ MONEY OPTIONS ************************************ -->
+<fieldset>
+<legend>Money options</legend>
+<table>
+
+<tr>
+    <td><label for="show_multiple_currencies">Show currency selector?</label></td>
+    <td><input type="checkbox" id="show_multiple_currencies" name="show_multiple_currencies" /></td>
+</tr>
+<tr>
+    <td colspan="2"><small>Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency.</small></td>
+</tr>
+<tr>
+    <td><label for="currency_format">Money format</label></td>
+    <td>
+        <select name="currency_format" id="currency_format">
+        <option value="money_format" selected="selected">Without Currency, ex: $10.00</option>
+        <option value="money_with_currency_format">With Currency, ex: $10 CAD</option>
+        </select>
+    </td>
+</tr>
+<tr>
+    <td><label for="supported_currencies">Currencies you wish to support</label></td>
+    <td><input type="text" class="text long" name="supported_currencies" id="supported_currencies" value="CAD USD" /></td>
+</tr>
+<tr>
+    <td><label for="default_currency">Default currency</label></td>
+    <td><input type="text" class="text" name="default_currency" id="default_currency" value="CAD" /></td>
+</tr>
+<tr>
+    <td colspan="2"><small>Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. Click <a target="_blank" href="http://www.xe.com/iso4217.php">here</a> for a complete list of currency codes. Example: <i>CAD USD</i>.</small></td>
+</tr>
+<tr>
+    <td colspan="2"><small>* For this functionality to work in your shop, you are required to edit your money formats as per <a href="http://wiki.shopify.com/Do_Tell_Where_The_Money_Is" target="_blank">these instructions</a> (“Do tell where the money is”).</small></td>
+</tr>
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ SLIDER ************************************ -->
+<fieldset>
+<legend>Slider</legend>
+<table>
+
+
+<tr>
+    <td>Slider script</td>
+    <td><label for="slider_toggle"><input type="checkbox" id="slider_toggle" name="slider_toggle" value="1" checked="checked" />Enable</label></td>
+</tr>
+<tr>
+    <td>Slider captions</td>
+    <td><label for="slider_captions_toggle"><input type="checkbox" id="slider_captions_toggle" name="slider_captions_toggle" value="1" checked="checked" />Enable</label></td>
+</tr>
+
+
+<!-- ************************ SLIDE 1 ************************ -->
+<tr>
+    <td colspan="2"><h3><b>Slide 1</b></h3></td>
+</tr>
+<tr>
+    <td><label for="slide1_toggle">Enable slide</label></td>
+    <td><input type="checkbox" id="slide1_toggle" name="slide1_toggle" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="slide1_image">Slide image</label></td>
+    <td><input type="file" name="slide1_image.jpg" id="slide1_image" data-max-width="870" data-max-height="353"/><small>Maximum slide image dimensions are 870x353px</small></td>
+</tr> 
+<tr>
+    <td><label for="slide1_link">Slide link</label></td>
+    <td><input type="text" name="slide1_link" id="slide1_link" class="text long" /></td>
+</tr>
+
+<tr>
+    <td colspan="2"><hr /></td>
+</tr>
+<tr>
+    <td><label for="slide1_caption1">Caption text #1</label></td>
+    <td><input type="text" name="slide1_caption1" id="slide1_caption1" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide1_caption2">Caption text #2</label></td>
+    <td><input type="text" name="slide1_caption2" id="slide1_caption2" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide1_caption3">Caption text #3</label></td>
+    <td><input type="text" name="slide1_caption3" id="slide1_caption3" class="text long" /></td>
+</tr>
+
+
+<!-- ************************ SLIDE 2 ************************ -->
+<tr>
+    <td colspan="2"><h3><b>Slide 2</b></h3></td>
+</tr>
+<tr>
+    <td><label for="slide2_toggle">Enable slide</label></td>
+    <td><input type="checkbox" id="slide2_toggle" name="slide2_toggle" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="slide2_image">Slide image</label></td>
+    <td><input type="file" name="slide2_image.jpg" id="slide2_image" data-max-width="870" data-max-height="353"/><small>Maximum slide image dimensions are 870x353px</small></td>
+</tr> 
+<tr>
+    <td><label for="slide2_link">Slide link</label></td>
+    <td><input type="text" name="slide2_link" id="slide2_link" class="text long" /></td>
+</tr>
+
+<tr>
+    <td colspan="2"><hr /></td>
+</tr>
+<tr>
+    <td><label for="slide2_caption1">Caption text #1</label></td>
+    <td><input type="text" name="slide2_caption1" id="slide2_caption1" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide2_caption2">Caption text #2</label></td>
+    <td><input type="text" name="slide2_caption2" id="slide2_caption2" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide2_caption3">Caption text #3</label></td>
+    <td><input type="text" name="slide2_caption3" id="slide2_caption3" class="text long" /></td>
+</tr>
+
+
+<!-- ************************ SLIDE 3 ************************ -->
+<tr>
+    <td colspan="2"><h3><b>Slide 3</b></h3></td>
+</tr>
+<tr>
+    <td><label for="slide3_toggle">Enable slide</label></td>
+    <td><input type="checkbox" id="slide3_toggle" name="slide3_toggle" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="slide3_image">Slide image</label></td>
+    <td><input type="file" name="slide3_image.jpg" id="slide3_image" data-max-width="870" data-max-height="353"/><small>Maximum slide image dimensions are 870x353px</small></td>
+</tr> 
+<tr>
+    <td><label for="slide3_link">Slide link</label></td>
+    <td><input type="text" name="slide3_link" id="slide3_link" class="text long" /></td>
+</tr>
+
+<tr>
+    <td colspan="2"><hr /></td>
+</tr>
+<tr>
+    <td><label for="slide3_caption1">Caption text #1</label></td>
+    <td><input type="text" name="slide3_caption1" id="slide3_caption1" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide3_caption2">Caption text #2</label></td>
+    <td><input type="text" name="slide3_caption2" id="slide3_caption2" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide3_caption3">Caption text #3</label></td>
+    <td><input type="text" name="slide3_caption3" id="slide3_caption3" class="text long" /></td>
+</tr>
+
+
+<!-- ************************ SLIDE 4 ************************ -->
+<tr>
+    <td colspan="2"><h3><b>Slide 4</b></h3></td>
+</tr>
+<tr>
+    <td><label for="slide4_toggle">Enable slide</label></td>
+    <td><input type="checkbox" id="slide4_toggle" name="slide4_toggle" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="slide4_image">Slide image</label></td>
+    <td><input type="file" name="slide4_image.jpg" id="slide4_image" data-max-width="870" data-max-height="353"/><small>Maximum slide image dimensions are 870x353px</small></td>
+</tr> 
+<tr>
+    <td><label for="slide4_link">Slide link</label></td>
+    <td><input type="text" name="slide4_link" id="slide4_link" class="text long" /></td>
+</tr>
+
+<tr>
+    <td colspan="2"><hr /></td>
+</tr>
+<tr>
+    <td><label for="slide4_caption1">Caption text #1</label></td>
+    <td><input type="text" name="slide4_caption1" id="slide4_caption1" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide4_caption2">Caption text #2</label></td>
+    <td><input type="text" name="slide4_caption2" id="slide4_caption2" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide4_caption3">Caption text #3</label></td>
+    <td><input type="text" name="slide4_caption3" id="slide4_caption3" class="text long" /></td>
+</tr>
+
+
+<!-- ************************ SLIDE 5 ************************ -->
+<tr>
+    <td colspan="2"><h3><b>Slide 5</b></h3></td>
+</tr>
+<tr>
+    <td><label for="slide5_toggle">Enable slide</label></td>
+    <td><input type="checkbox" id="slide5_toggle" name="slide5_toggle" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="slide5_image">Slide image</label></td>
+    <td><input type="file" name="slide5_image.jpg" id="slide5_image" data-max-width="870" data-max-height="353"/><small>Maximum slide image dimensions are 870x353px</small></td>
+</tr> 
+<tr>
+    <td><label for="slide5_link">Slide link</label></td>
+    <td><input type="text" name="slide5_link" id="slide5_link" class="text long" /></td>
+</tr>
+
+<tr>
+    <td colspan="2"><hr /></td>
+</tr>
+<tr>
+    <td><label for="slide5_caption1">Caption text #1</label></td>
+    <td><input type="text" name="slide5_caption1" id="slide5_caption1" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide5_caption2">Caption text #2</label></td>
+    <td><input type="text" name="slide5_caption2" id="slide5_caption2" class="text long" /></td>
+</tr>
+<tr>
+    <td><label for="slide5_caption3">Caption text #3</label></td>
+    <td><input type="text" name="slide5_caption3" id="slide5_caption3" class="text long" /></td>
+</tr>
+
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- ************************************ CUSTOM BLOCKS ************************************ -->
+<fieldset>
+<legend>Custom blocks</legend>
+<table>
+
+<!-- ************************ HEADER ************************ -->
+<tr>
+    <td colspan="3"><h3><b>Header position</b></h3></td>
+</tr>
+
+
+<tr>
+    <td>Custom header block #1</td>
+    <td colspan="2"><label for="custom_header1_text1">Text</label><input type="text" name="custom_header1_text1" id="custom_header1_text1" class="long" /></td>
+</tr>
+
+
+<!-- ************************ SHOWCASE ************************ -->
+<tr>
+    <td colspan="3"><h3><b>Showcase position</b></h3></td>
+</tr>
+
+
+<tr>
+    <td>Custom showcase block #1</td>
+    <td colspan="2"><label for="custom_showcase1_img_toggle"><input type="checkbox" id="custom_showcase1_img_toggle" name="custom_showcase1_img_toggle" value="1" />Show image</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_showcase1_img.jpg" id="custom_showcase1_img" data-max-width="270" data-max-height="180" /><small>Maximum dimensions are 270x180px</small></td>
+</tr>
+<tr>
+    <td></td>
+    <td><label for="custom_showcase1_text1">Text 1</label><input type="text" name="custom_showcase1_text1" id="custom_showcase1_text1" class="long" /></td>
+    <td><label for="custom_showcase1_text2">Text 2</label><input type="text" name="custom_showcase1_text2" id="custom_showcase1_text2" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase1_text3">Text 3</label><input type="text" name="custom_showcase1_text3" id="custom_showcase1_text3" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase1_link">Link</label><input type="text" name="custom_showcase1_link" id="custom_showcase1_link" class="long" /></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Custom showcase block #2</td>
+    <td colspan="2"><label for="custom_showcase2_img_toggle"><input type="checkbox" id="custom_showcase2_img_toggle" name="custom_showcase2_img_toggle" value="1" />Show image</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_showcase2_img.jpg" id="custom_showcase2_img" data-max-width="270" data-max-height="180" /><small>Maximum dimensions are 270x180px</small></td>
+</tr>
+<tr>
+    <td></td>
+    <td><label for="custom_showcase2_text1">Text 1</label><input type="text" name="custom_showcase2_text1" id="custom_showcase2_text1" class="long" /></td>
+    <td><label for="custom_showcase2_text2">Text 2</label><input type="text" name="custom_showcase2_text2" id="custom_showcase2_text2" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase2_text3">Text 3</label><input type="text" name="custom_showcase2_text3" id="custom_showcase2_text3" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase2_link">Link</label><input type="text" name="custom_showcase2_link" id="custom_showcase2_link" class="long" /></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Custom showcase block #3</td>
+    <td colspan="2"><label for="custom_showcase3_img_toggle"><input type="checkbox" id="custom_showcase3_img_toggle" name="custom_showcase3_img_toggle" value="1" />Show image</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_showcase3_img.jpg" id="custom_showcase3_img" data-max-width="270" data-max-height="180" /><small>Maximum dimensions are 270x180px</small></td>
+</tr>
+<tr>
+    <td></td>
+    <td><label for="custom_showcase3_text1">Text 1</label><input type="text" name="custom_showcase3_text1" id="custom_showcase3_text1" class="long" /></td>
+    <td><label for="custom_showcase3_text2">Text 2</label><input type="text" name="custom_showcase3_text2" id="custom_showcase3_text2" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase3_text3">Text 3</label><input type="text" name="custom_showcase3_text3" id="custom_showcase3_text3" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase3_link">Link</label><input type="text" name="custom_showcase3_link" id="custom_showcase3_link" class="long" /></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Custom showcase block #4</td>
+    <td colspan="2"><label for="custom_showcase4_img_toggle"><input type="checkbox" id="custom_showcase4_img_toggle" name="custom_showcase4_img_toggle" value="1" />Show image</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_showcase4_img.jpg" id="custom_showcase4_img" data-max-width="270" data-max-height="180" /><small>Maximum dimensions are 270x180px</small></td>
+</tr>
+<tr>
+    <td></td>
+    <td><label for="custom_showcase4_text1">Text 1</label><input type="text" name="custom_showcase4_text1" id="custom_showcase4_text1" class="long" /></td>
+    <td><label for="custom_showcase4_text2">Text 2</label><input type="text" name="custom_showcase4_text2" id="custom_showcase4_text2" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase4_text3">Text 3</label><input type="text" name="custom_showcase4_text3" id="custom_showcase4_text3" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase4_link">Link</label><input type="text" name="custom_showcase4_link" id="custom_showcase4_link" class="long" /></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Custom showcase block #5</td>
+    <td colspan="2"><label for="custom_showcase5_img_toggle"><input type="checkbox" id="custom_showcase5_img_toggle" name="custom_showcase5_img_toggle" value="1" />Show image</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_showcase5_img.jpg" id="custom_showcase5_img" data-max-width="270" data-max-height="180" /><small>Maximum dimensions are 270x180px</small></td>
+</tr>
+<tr>
+    <td></td>
+    <td><label for="custom_showcase5_text1">Text 1</label><input type="text" name="custom_showcase5_text1" id="custom_showcase5_text1" class="long" /></td>
+    <td><label for="custom_showcase5_text2">Text 2</label><input type="text" name="custom_showcase5_text2" id="custom_showcase5_text2" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase5_text3">Text 3</label><input type="text" name="custom_showcase5_text3" id="custom_showcase5_text3" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase5_link">Link</label><input type="text" name="custom_showcase5_link" id="custom_showcase5_link" class="long" /></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Custom showcase block #6</td>
+    <td colspan="2"><label for="custom_showcase6_img_toggle"><input type="checkbox" id="custom_showcase6_img_toggle" name="custom_showcase6_img_toggle" value="1" />Show image</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_showcase6_img.jpg" id="custom_showcase6_img" data-max-width="270" data-max-height="180" /><small>Maximum dimensions are 270x180px</small></td>
+</tr>
+<tr>
+    <td></td>
+    <td><label for="custom_showcase6_text1">Text 1</label><input type="text" name="custom_showcase6_text1" id="custom_showcase6_text1" class="long" /></td>
+    <td><label for="custom_showcase6_text2">Text 2</label><input type="text" name="custom_showcase6_text2" id="custom_showcase6_text2" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase6_text3">Text 3</label><input type="text" name="custom_showcase6_text3" id="custom_showcase6_text3" class="long" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_showcase6_link">Link</label><input type="text" name="custom_showcase6_link" id="custom_showcase6_link" class="long" /></td>
+</tr>
+
+
+<!-- ************************ SIDEBAR ************************ -->
+<tr>
+    <td colspan="3"><h3><b>Sidebar position</b></h3></td>
+</tr>
+
+
+<tr>
+    <td>Sidebar banner</td>
+    <td colspan="2"><label for="custom_sidebar_img_toggle"><input type="checkbox" id="custom_sidebar_img_toggle" name="custom_sidebar_img_toggle" value="1" />Show banner</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><input type="file" name="custom_sidebar_img.jpg" id="custom_sidebar_img" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_sidebar_link">Link</label><input type="text" name="custom_sidebar_link" id="custom_sidebar_link" class="long" /></td>
+</tr>
+
+
+<!-- ************************ FOOTER ************************ -->
+<tr>
+    <td colspan="3"><h3><b>Footer position</b></h3></td>
+</tr>
+
+
+<tr>
+    <td>Footer block #1 (links list)</td>
+    <td><label for="custom_footer1_title">Title</label></td>
+    <td><label for="custom_footer1_list">Content</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td><input type="text" name="custom_footer1_title" id="custom_footer1_title" class="long" /></td>
+    <td><select class="linklist" name="custom_footer1_list" id="custom_footer1_list"></select></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Footer block #2 (links list)</td>
+    <td><label for="custom_footer2_title">Title</label></td>
+    <td><label for="custom_footer2_list">Content</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td><input type="text" name="custom_footer2_title" id="custom_footer2_title" class="long" /></td>
+    <td><select class="linklist" name="custom_footer2_list" id="custom_footer2_list"></select></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Footer block #3 (social links)</td>
+    <td><label for="custom_footer3_title">Title</label></td>
+    <td><label for="">Content</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td><input type="text" name="custom_footer3_title" id="custom_footer3_title" class="long" /></td>
+    <td><label for="custom_footer3_twitter">Twitter</label><input type="text" name="custom_footer3_twitter" id="custom_footer3_twitter" class="long" /><br /><br /></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><label for="custom_footer3_facebook">Facebook</label><input type="text" name="custom_footer3_facebook" id="custom_footer3_facebook" class="long" /><br /><br /></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><label for="custom_footer3_youtube">Youtube</label><input type="text" name="custom_footer3_youtube" id="custom_footer3_youtube" class="long" /><br /><br /></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><label for="custom_footer3_instagram">Instagram</label><input type="text" name="custom_footer3_instagram" id="custom_footer3_instagram" class="long" /><br /><br /></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><label for="custom_footer3_pinterest">Pinterest</label><input type="text" name="custom_footer3_pinterest" id="custom_footer3_pinterest" class="long" /><br /><br /></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><label for="custom_footer3_googleplus">Google+</label><input type="text" name="custom_footer3_googleplus" id="custom_footer3_googleplus" class="long" /><br /><br /></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><label for="custom_footer3_tumblr">Tumblr</label><input type="text" name="custom_footer3_tumblr" id="custom_footer3_tumblr" class="long" /><br /><br /></td>
+</tr>
+
+
+<tr><td colspan="3"><br /><hr /></td></tr>
+<tr>
+    <td>Footer block #4 (Newsletter and Paypal)</td>
+    <td colspan="2"><label for="custom_footer4_newsletter"><input type="checkbox" id="custom_footer4_newsletter" name="custom_footer4_newsletter" value="1" />Show newsletter form</label></td>
+</tr>
+<tr>
+    <td></td>
+    <td colspan="2"><label for="custom_footer4_paypal"><input type="checkbox" id="custom_footer4_paypal" name="custom_footer4_paypal" value="1" />Show paypal logo</label></td>
+</tr>
+
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- MAILING LIST -->
+<fieldset>
+<legend>Mailing list</legend>
+<table>
+
+<tr>
+    <td><label for="mailchimp_form_action">MailChimp Form Action <a target="_blank" href="http://support.shopify.com/customer/portal/articles/640278">( ? )</a></label></td>
+    <td><textarea id="mailchimp_form_action" name="mailchimp_form_action" class="text long" /></td>
+</tr>
+<tr>
+    <td colspan="2"><small><a target="_blank" href="http://support.shopify.com/customer/portal/articles/640278">Where do I get my MailChimp Form Action?</a></small></td>
+</tr>
+<tr>
+    <td><label for="mailing_list_title">Mailing List Title</label></td>
+    <td><input id="mailing_list_title" name="mailing_list_title" class="text long" value="Newsletter" /></td>
+</tr>
+
+<!--
+<tr>
+    <td><label for="mailing_list_tagline">Mailing List Tagline</label></td>
+    <td><textarea id="mailing_list_tagline" name="mailing_list_tagline" class="text long" /></td>
+</tr>
+-->
+
+
+</table>
+<br />
+</fieldset>
+
+
+
+<!-- PAYMENT METHODS -->
+<fieldset>
+<legend>Payment methods</legend>
+<table class="standard-table">
+
+<tr>
+    <td><label for="show_amex">American Express</label></td>
+    <td><input type="checkbox" id="show_amex" name="show_amex" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_discover">Discover</label></td>
+    <td><input type="checkbox" id="show_discover" name="show_discover" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_visa">Visa</label></td>
+    <td><input type="checkbox" id="show_visa" name="show_visa" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_mastercard">Mastercard</label></td>
+    <td><input type="checkbox" id="show_mastercard" name="show_mastercard" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_maestro">Maestro</label></td>
+    <td><input type="checkbox" id="show_maestro" name="show_maestro" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_cirrus">Cirrus</label></td>
+    <td><input type="checkbox" id="show_cirrus" name="show_cirrus" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_paypal">Paypal</label></td>
+    <td><input type="checkbox" id="show_paypal" name="show_paypal" value="1" checked="checked" /></td>
+</tr>
+<tr>
+    <td><label for="show_google">Google Checkout</label></td>
+    <td><input type="checkbox" id="show_google" name="show_google" value="1" checked="checked" /></td>
+</tr>
+
+</table>
+<br />
+</fieldset>
